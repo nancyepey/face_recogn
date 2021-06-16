@@ -63,7 +63,9 @@ async function start() {
     document.body.append(container);
     //
     const LabeledFaceDescriptors = await loadLabeledImages();
+    console.log(LabeledFaceDescriptors);
     const faceMatcher = new faceapi.faceMatcher(LabeledFaceDescriptors, 0.6); //at least 60% sure
+    console.log(faceMatcher);
     //
     let image;
     let canvas;
